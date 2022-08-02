@@ -3,6 +3,7 @@ import './App.css';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import DisplayMusic from './Components/DisplayMusic/DisplayMusic';
+import CreateSong from './Components/CreateSong/CreateSong';
 
 function App() {
 
@@ -34,6 +35,7 @@ function App() {
   return (
     <div className='page-container'>
       <div><DisplayMusic displaySongs = {songs} deleteSongProp = {deleteSong}/></div> 
+      <div className='content-wrap'><CreateSong addNewSong={createSong}/></div>
     </div>
   );
 }
