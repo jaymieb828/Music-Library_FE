@@ -26,16 +26,10 @@ function App() {
     }
   } 
 
-  async function deleteSong(song){
-    let response = await axios.delete('http://127.0.0.1:8000/api/music/', song);
-    if(response.status === 200){
-      await getAllSongs();
-    }
-  }
   return (
     <div className='page-container'>
       <NavBar></NavBar>
-      <div><DisplayMusic displaySongs = {songs} deleteSongProp = {deleteSong}/></div> 
+      <div><DisplayMusic displaySongs = {songs}/></div> 
       <div className='content-wrap'><CreateSong addNewSong={createSong}/></div>
       
     </div>
