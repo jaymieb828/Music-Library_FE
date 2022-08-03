@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './DisplayMusic.css';
 
 
 const DisplayMusic = (props) => {
@@ -6,16 +7,18 @@ const DisplayMusic = (props) => {
     const [searchTerm, setSearchTerm] = useState('');
 
     return (  
-    <div className = 'display-container'>
+        <div className = 'display-container'>
         <div className='table-title'>
             <div className ='library-contain'>
                 <h2 className='library-title'>Song List</h2>
             </div>
             <div className = 'search-filter'>
                 <label className='search-label'>Filter Song List:</label>
-                <input type='text' className='custom-input' placeholder="Search...(e.g. Hip Hop)" onChange={(event) => setSearchTerm(event.target.value)}/>
+                <input type='text' className='custom-input' placeholder="Search...(e.g. Pop music)" onChange={(event) => setSearchTerm(event.target.value)}/>
             </div>
         </div>
+        
+        
         <table className='song-table table'>
         <thead>
             <tr className = 'header-row'>
@@ -27,8 +30,8 @@ const DisplayMusic = (props) => {
             </tr>
         </thead>
         <tbody>
-            {props.displaySongs.filter((song) =>{
-                if (searchTerm == ""){
+            {props.displaySongs.filter((song) => {
+                if (searchTerm === ""){
                     return song;
                 }
                 else if (song.title.toLowerCase().includes(searchTerm.toLocaleLowerCase()) || song.artist.toLowerCase().includes(searchTerm.toLocaleLowerCase()) || song.album.toLowerCase().includes(searchTerm.toLocaleLowerCase()) || song.release_date.toLowerCase().includes(searchTerm.toLocaleLowerCase()) || song.genre.toLowerCase().includes(searchTerm.toLocaleLowerCase())) {

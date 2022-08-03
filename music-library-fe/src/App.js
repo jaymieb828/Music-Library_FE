@@ -28,7 +28,7 @@ function App() {
 
   return (
     <div className='page-container'>
-      <NavBar></NavBar>
+      <NavBar className = 'navbar'/>
       <div><DisplayMusic displaySongs = {songs}/></div> 
       <div className='content-wrap'><CreateSong addNewSong={createSong}/></div>
       

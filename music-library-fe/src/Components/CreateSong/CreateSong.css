@@ -1,0 +1,44 @@
+create-container {
+    display: flex;
+    max-width: 1375px;
+    margin: auto;
+    flex-direction: column;
+    border: solid;
+    border-radius: 20px;
+    background-color: rgb(247, 239, 239);
+  }
+  
+  .addSong-title {
+    margin-top: 2rem;
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .form-contain {
+    display: flex;
+    padding-top: 1.5rem;
+  }
+  
+  .form-label {
+    font-weight: bold;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: large;
+    color: rgb(250, 250, 250);
+  }
+  
+  .button-contain {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    padding-top: -em;
+  }
+  
+  .add-button {
+    border: solid rgb(245, 247, 248);
+    background-color: rgb(113, 114, 163);
+    font-weight: bold;
+    border-radius: 10px;
+  }
