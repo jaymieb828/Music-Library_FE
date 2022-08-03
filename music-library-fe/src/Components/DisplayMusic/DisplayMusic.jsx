@@ -13,7 +13,7 @@ const DisplayMusic = (props) => {
             </div>
             <div className = 'search-filter'>
                 <label className='search-label'>Filter Song List:</label>
-                <input type='text' className='custom-input' placeholder="Search...(e.g. Pop music)" onChange={(event) => setSearchTerm(event.target.value)}/>
+                <input type='text' className='custom-input' placeholder="Search...(e.g. Hip Hop)" onChange={(event) => setSearchTerm(event.target.value)}/>
             </div>
         </div>
         <table className='song-table table'>
@@ -24,7 +24,6 @@ const DisplayMusic = (props) => {
                 <th>Album</th>            
                 <th>Release Date</th>
                 <th>Genre</th>
-                <th>Likes</th>
             </tr>
         </thead>
         <tbody>
@@ -44,7 +43,6 @@ const DisplayMusic = (props) => {
                     <td>{song.album}</td>
                     <td>{song.release_date}</td>
                     <td>{song.genre}</td>
-                    <td className ='dbutton-contain'><button type = 'submit' className ='delete-button' onClick={() => props.deleteSongProp(song)}>Delete</button></td>
                 </tr>
             )
             })}

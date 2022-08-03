@@ -1,9 +1,9 @@
 
-import './App.css';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import DisplayMusic from './Components/DisplayMusic/DisplayMusic';
 import CreateSong from './Components/CreateSong/CreateSong';
+import NavBar from './Components/SearchBar/SearchBar';
 
 function App() {
 
@@ -34,8 +34,10 @@ function App() {
   }
   return (
     <div className='page-container'>
+      <NavBar></NavBar>
       <div><DisplayMusic displaySongs = {songs} deleteSongProp = {deleteSong}/></div> 
       <div className='content-wrap'><CreateSong addNewSong={createSong}/></div>
+      
     </div>
   );
 }

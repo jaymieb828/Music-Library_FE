@@ -35,7 +35,7 @@ const CreateSong = (props) => {
     return (  
 
     <div>
-        <h2 className='addSong-title'>Add <img src ="\images\FA-removebg.png" className = "navbar-image" alt = "FRM ABVE Logo"/> Song</h2>
+        <h2 className='addSong-title'>Add Song</h2>
         <div className='create-container'>
             <form onSubmit = {handleSubmit}>
                 <div className='form-contain'>
