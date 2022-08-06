@@ -27,6 +27,7 @@ const DisplayMusic = (props) => {
                 <th>Album</th>            
                 <th>Release Date</th>
                 <th>Genre</th>
+                <th>Delete</th>
             </tr>
         </thead>
         <tbody>
@@ -46,6 +47,8 @@ const DisplayMusic = (props) => {
                     <td>{song.album}</td>
                     <td>{song.release_date}</td>
                     <td>{song.genre}</td>
+                    <td><td className ='dbutton-contain'><button type = 'submit' className ='delete-button' onClick={() => props.deleteSongProp(song)}>Delete</button></td></td>
+                    
                 </tr>
             )
             })}
