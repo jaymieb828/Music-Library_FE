@@ -13,8 +13,8 @@ const DisplayMusic = (props) => {
                 <h2 className='library-title'>Song List</h2>
             </div>
             <div className = 'search-filter'>
-                <label className='search-label'>Filter Song List:</label>
-                <input type='text' className='custom-input' placeholder="Search...(e.g. Pop music)" onChange={(event) => setSearchTerm(event.target.value)}/>
+                <label className='search-label'>Song Search:</label>
+                <input type='text' className='custom-input' placeholder='Enter Title, Artist, Album, Release Date or Genre...' onChange={(event) => setSearchTerm(event.target.value)}/>
             </div>
         </div>
         
