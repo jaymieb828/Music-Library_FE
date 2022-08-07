@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import DisplayMusic from './Components/DisplayMusic/DisplayMusic';
 import CreateSong from './Components/CreateSong/CreateSong';
-import NavBar from './Components/SearchBar/SearchBar';
+
 
 function App() {
 
@@ -28,7 +28,6 @@ function App() {
 
   return (
     <div className='page-container'>
-      <NavBar className = 'navbar'/>
       <div><DisplayMusic displaySongs = {songs}/></div> 
       <div className='content-wrap'><CreateSong addNewSong={createSong}/></div>
       
